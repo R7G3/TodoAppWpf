@@ -1,4 +1,7 @@
 using GalaSoft.MvvmLight;
+using System.Collections.ObjectModel;
+using System.Windows.Input;
+using TodoAppWpf.Model;
 
 namespace TodoAppWpf.ViewModel
 {
@@ -29,6 +32,93 @@ namespace TodoAppWpf.ViewModel
             ////{
             ////    // Code runs "for real"
             ////}
+        }
+
+        public ObservableCollection<Todo> Todos
+        {
+            get;
+            set;
+        }
+
+        public ObservableCollection<Category> Categories
+        {
+            get;
+            set;
+        }
+
+
+        private Todo selectedTodo;
+
+        public Todo SelectedTodo
+        {
+            get => selectedTodo;
+            set
+            {
+                selectedTodo = value;
+                RaisePropertyChanged();
+            }
+        }
+
+
+        private Category selectedCategory;
+
+        public Category SelectedCategory
+        {
+            get => selectedCategory;
+            set
+            {
+                selectedCategory = value;
+                RaisePropertyChanged();
+            }
+        }
+
+
+        public ICommand AddTodoCommand
+        {
+            get;
+            private set;
+        }
+
+        public ICommand EditTodoCommand
+        {
+            get;
+            private set;
+        }
+
+        public ICommand DeleteTodoCommand
+        {
+            get;
+            private set;
+        }
+
+        public ICommand AddCategoryCommand
+        {
+            get;
+            private set;
+        }
+
+        public ICommand DeleteCategoryCommand
+        {
+            get;
+            private set;
+        }
+
+        public override void Cleanup()
+        {
+            Todos = null;
+            SelectedTodo = null;
+
+            Categories = null;
+            SelectedCategory = null;
+
+            AddTodoCommand = null;
+            EditTodoCommand = null;
+            DeleteTodoCommand = null;
+
+            AddCategoryCommand = null;
+            DeleteCategoryCommand = null;
+
+            base.Cleanup();
         }
     }
 }
