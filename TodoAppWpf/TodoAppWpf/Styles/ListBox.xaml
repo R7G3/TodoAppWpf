@@ -1,0 +1,195 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:TodoAppWpf.Styles">
+
+    <!--Стиль обводки карточек задачи-->
+    <Style
+        x:Key="Border.Style"
+        TargetType="Border">
+
+        <Setter
+            Property="BorderThickness"
+            Value="1"/>
+
+        <Setter
+            Property="Background"
+            Value="{StaticResource ListBoxItem.Border.Background.Brush}"/>
+
+        <Setter
+            Property="BorderBrush"
+            Value="{StaticResource ListBoxItem.Border.Brush}"/>
+
+        <Setter
+            Property="Margin"
+            Value="2"/>
+
+        <Setter
+            Property="Padding"
+            Value="3"/>
+
+    </Style>
+
+    <!--Стиль текстового блока с заголовком задачи-->
+    <Style
+        x:Key="TextBlock.Header.Style"
+        TargetType="TextBlock">
+
+        <Setter
+            Property="HorizontalAlignment"
+            Value="Left"/>
+
+        <Setter
+            Property="FontSize"
+            Value="14"/>
+
+    </Style>
+
+    <!--Стиль текстового блока с категорией задачи-->
+    <Style
+        x:Key="TextBlock.Category.Style"
+        TargetType="TextBlock">
+
+        <Setter
+            Property="HorizontalAlignment"
+            Value="Right"/>
+
+        <Setter
+            Property="Foreground"
+            Value="{StaticResource TextBlock.Foregroung.Category.Brush}"/>
+
+    </Style>
+
+    <!--Стиль текстового блока с содержимым задачи-->
+    <Style
+        x:Key="TextBlock.Content.Style"
+        TargetType="TextBlock">
+
+        <Setter
+            Property="TextWrapping"
+            Value="Wrap"/>
+
+        <Setter
+            Property="TextTrimming"
+            Value="CharacterEllipsis"/>
+
+        <Setter
+            Property="MaxHeight"
+            Value="50"/>
+
+        <Setter
+            Property="Margin"
+            Value="0,3,0,0"/>
+
+    </Style>
+
+    <!--Стиль контейнера элементов списка-->
+    <Style
+        x:Key="ListBoxItem.Style"
+        TargetType="ListBoxItem">
+
+        <Setter
+            Property="Template">
+
+            <Setter.Value>
+
+                <ControlTemplate>
+
+                    <Border
+                        x:Name="containerBorder"
+                        Style="{StaticResource Border.Style}">
+
+                        <Grid>
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Grid
+                                Grid.Row="0"
+                                Grid.Column="0">
+
+                                <TextBlock
+                                    Style="{StaticResource TextBlock.Header.Style}"
+                                    Text="{Binding Header}"/>
+
+                                <TextBlock
+                                    Style="{StaticResource TextBlock.Category.Style}"
+                                    Text="{Binding Category.Name}"/>
+
+                            </Grid>
+
+                            <TextBlock
+                                Grid.Row="1"
+                                Grid.Column="0"
+                                Style="{StaticResource TextBlock.Content.Style}"
+                                Text="{Binding Content}"/>
+
+                        </Grid>
+
+                    </Border>
+
+                    <ControlTemplate.Triggers>
+
+                        <Trigger
+                            Property="ListBoxItem.IsSelected"
+                            Value="True">
+
+                            <Setter
+                                TargetName="containerBorder"
+                                Property="Background"
+                                Value="{StaticResource ListBoxItem.Border.Background.Brush.Selected}"/>
+
+                            <Setter
+                                TargetName="containerBorder"
+                                Property="BorderBrush"
+                                Value="{StaticResource ListBoxItem.BorderBrush.Brush.Selected}"/>
+
+                        </Trigger>
+
+                    </ControlTemplate.Triggers>
+
+                </ControlTemplate>
+
+            </Setter.Value>
+
+        </Setter>
+
+    </Style>
+
+    <!--Стиль списка задач-->
+    <Style
+        x:Key="ListBox.Style.Todos"
+        TargetType="ListBox">
+
+        <Setter
+            Property="BorderThickness"
+            Value="0"/>
+
+        <Setter
+            Property="HorizontalContentAlignment"
+            Value="Stretch"/>
+
+        <Setter
+            Property="ScrollViewer.CanContentScroll"
+            Value="False"/>
+
+        <Setter
+            Property="ScrollViewer.HorizontalScrollBarVisibility"
+            Value="Disabled"/>
+
+        <Setter
+            Property="ScrollViewer.VerticalScrollBarVisibility"
+            Value="Hidden"/>
+
+        <Setter
+            Property="ItemContainerStyle"
+            Value="{StaticResource ListBoxItem.Style}"/>
+
+    </Style>
+
+</ResourceDictionary>
