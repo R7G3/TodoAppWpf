@@ -29,6 +29,9 @@
                 <ResourceDictionary
                     Source="Styles/Button.xaml"/>
 
+                <ResourceDictionary
+                    Source="Styles/ComboBox.xaml"/>
+
             </ResourceDictionary.MergedDictionaries>
             
         </ResourceDictionary>

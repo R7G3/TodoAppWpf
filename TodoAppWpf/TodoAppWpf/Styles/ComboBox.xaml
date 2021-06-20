@@ -1,0 +1,77 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:TodoAppWpf.Styles"
+                    xmlns:system="clr-namespace:System;assembly=mscorlib">
+
+    <!--Шаблон содержимого элементов ComboBox для категорий-->
+    <DataTemplate
+        x:Key="ComboBox.ItemTemplate.Category">
+
+        <DockPanel
+            x:Name="generalContainer"
+            MinWidth="68"
+            Width="Auto">
+
+            <TextBlock
+                x:Name="categoryName"
+                DockPanel.Dock="Left"
+                Text="{Binding Name}"/>
+
+            <Button
+                x:Name="deleteCategoryButton"
+                DockPanel.Dock="Right"
+                Content="X"
+                Style="{StaticResource Button.Style.DeleteCategory}"
+                Command="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=Window}, Path=DataContext.DeleteCategoryCommand}"
+                CommandParameter="{Binding}">
+
+            </Button>
+
+        </DockPanel>
+
+        <DataTemplate.Triggers>
+
+            <Trigger
+                SourceName="categoryName"
+                Property="Text"
+                Value="{x:Static system:String.Empty}">
+
+                <Setter
+                    TargetName="deleteCategoryButton"
+                    Property="Visibility"
+                    Value="Collapsed"/>
+
+            </Trigger>
+
+        </DataTemplate.Triggers>
+
+    </DataTemplate>
+
+    <!--Стиль ComboBox для категорий-->
+    <Style
+        x:Key="ComboBox.Style.Category"
+        TargetType="ComboBox">
+
+        <Setter
+            Property="ItemTemplate"
+            Value="{StaticResource ComboBox.ItemTemplate.Category}"/>
+
+        <Setter
+            Property="Height"
+            Value="26"/>
+
+        <Setter
+            Property="Width"
+            Value="80"/>
+
+        <Setter
+            Property="Margin"
+            Value="0,6,3,0"/>
+
+        <Setter
+            Property="HorizontalContentAlignment"
+            Value="Stretch"/>
+
+    </Style>
+
+</ResourceDictionary>
