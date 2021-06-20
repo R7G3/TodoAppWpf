@@ -35,27 +35,14 @@ namespace TodoAppWpf.Helper
         /// <summary>
         /// Генерирует задачу
         /// </summary>
-        /// <returns>Объект задачи с заполненным заголовком и содержимым</returns>
-        public static Todo GenerateTodo()
-        {
-            return new Todo()
-            {
-                Header = LoremIpsum.Substring(0, 15),
-                Content = LoremIpsum.Substring(0, Generator.Next(LoremIpsum.Length))
-            };
-        }
-
-        /// <summary>
-        /// Генерирует задачу
-        /// </summary>
         /// <param name="category">Объект категории, который будет присвоен возвращённой задаче</param>
-        /// <returns>Полностью заполненный объект задачи</returns>
-        public static Todo GenerateTodo(Category category)
+        /// <returns>Заполненный объект задачи</returns>
+        public static Todo GenerateTodo(Category category = null)
         {
             return new Todo()
             {
                 Header = LoremIpsum.Substring(0, 15),
-                Category = category,
+                Category = category ?? GenerateCategory(),
                 Content = LoremIpsum.Substring(0, Generator.Next(LoremIpsum.Length))
             };
         }
