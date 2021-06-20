@@ -10,9 +10,79 @@
         d:DataContext="{d:DesignInstance Type=vm:MainViewModel, IsDesignTimeCreatable=True}"
         DataContext="{Binding Main, Source={StaticResource Locator}}"
         Title="MainWindow"
-        Height="450"
-        Width="800">
+        Style="{StaticResource Window.Style}">
+    
     <Grid>
-        
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+
+        <Grid
+            Grid.Row="0">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel
+                Grid.Column="0"
+                Orientation="Horizontal">
+
+                <StackPanel.Resources>
+
+                    <Style
+                        TargetType="{x:Type Button}"
+                        BasedOn="{StaticResource Button.Style}">
+
+                        <Setter
+                            Property="Margin"
+                            Value="3,6,0,0"/>
+
+                    </Style>
+
+                </StackPanel.Resources>
+
+                <Button
+                    Content="Add"
+                    Command="{Binding AddTodoCommand}"/>
+
+                <Button
+                    Content="Edit"
+                    Command="{Binding EditTodoCommand}"/>
+
+                <Button
+                    Content="Delete"
+                    Command="{Binding DeleteTodoCommand}"/>
+
+            </StackPanel>
+
+            <StackPanel
+                Grid.Column="1"
+                Orientation="Horizontal"
+                HorizontalAlignment="Right">
+
+                <ComboBox
+                    Style="{StaticResource ComboBox.Style.Category}"
+                    ItemsSource="{Binding Categories}"
+                    SelectedItem="{Binding SelectedCategory}"/>
+
+                <Button
+                    Style="{StaticResource Button.Style.AddCategory}"
+                    Command="{Binding AddCategoryCommand}"/>
+
+            </StackPanel>
+
+        </Grid>
+
+        <ListBox
+            Grid.Row="1"
+            ItemsSource="{Binding Todos}"
+            SelectedItem="{Binding SelectedTodo}"
+            DisplayMemberPath="Header"/>
+
     </Grid>
+    
 </Window>
