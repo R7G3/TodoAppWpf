@@ -31,4 +31,33 @@
 
     <!--#endregion-->
 
+    <!--#region Кисти для карточек задач-->
+
+    <!--Кисть границы карточки с задачей-->
+    <SolidColorBrush
+        x:Key="ListBoxItem.Border.Brush"
+        Color="Black"/>
+
+    <!--Кисть фона карточки с задачей-->
+    <SolidColorBrush
+        x:Key="ListBoxItem.Border.Background.Brush"
+        Color="Transparent"/>
+
+    <!--Кисть для шрифта с именем категории-->
+    <SolidColorBrush
+        x:Key="TextBlock.Foregroung.Category.Brush"
+        Color="Gray"/>
+
+    <!--Кисть фона выбранной карточки с задачей-->
+    <SolidColorBrush
+        x:Key="ListBoxItem.Border.Background.Brush.Selected"
+        Color="#efffef"/>
+
+    <!--Кисть границы выбранной карточки с задачей-->
+    <SolidColorBrush
+        x:Key="ListBoxItem.BorderBrush.Brush.Selected"
+        Color="#00af00"/>
+
+    <!--#endregion-->
+
 </ResourceDictionary>
