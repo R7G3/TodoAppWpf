@@ -28,7 +28,7 @@ namespace TodoAppWpf.Helper
         {
             return new Category()
             {
-                Name = LoremIpsum.Substring(0, 5)
+                Name = LoremIpsum.Substring(Generator.Next(0, LoremIpsum.Length - 5), 5)
             };
         }
 
@@ -41,6 +41,21 @@ namespace TodoAppWpf.Helper
             return new Todo()
             {
                 Header = LoremIpsum.Substring(0, 15),
+                Content = LoremIpsum.Substring(0, Generator.Next(LoremIpsum.Length))
+            };
+        }
+
+        /// <summary>
+        /// Генерирует задачу
+        /// </summary>
+        /// <param name="category">Объект категории, который будет присвоен возвращённой задаче</param>
+        /// <returns>Полностью заполненный объект задачи</returns>
+        public static Todo GenerateTodo(Category category)
+        {
+            return new Todo()
+            {
+                Header = LoremIpsum.Substring(0, 15),
+                Category = category,
                 Content = LoremIpsum.Substring(0, Generator.Next(LoremIpsum.Length))
             };
         }
