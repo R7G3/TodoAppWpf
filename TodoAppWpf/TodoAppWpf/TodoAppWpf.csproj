@@ -71,6 +71,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Helper\VisualDesignerDataGenerator.cs" />
     <Compile Include="Model\Category.cs" />
     <Compile Include="Model\Todo.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
