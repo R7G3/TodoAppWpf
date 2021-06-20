@@ -1,6 +1,7 @@
 using GalaSoft.MvvmLight;
 using System.Collections.ObjectModel;
 using System.Windows.Input;
+using TodoAppWpf.Helper;
 using TodoAppWpf.Model;
 
 namespace TodoAppWpf.ViewModel
@@ -24,14 +25,28 @@ namespace TodoAppWpf.ViewModel
         /// </summary>
         public MainViewModel()
         {
-            ////if (IsInDesignMode)
-            ////{
-            ////    // Code runs in Blend --> create design time data.
-            ////}
-            ////else
-            ////{
-            ////    // Code runs "for real"
-            ////}
+            Todos = new ObservableCollection<Todo>();
+            Categories = new ObservableCollection<Category>();
+
+            if (IsInDesignMode)
+            {
+                GenerateDataForVisualDesigner();
+                return;
+            }
+        }
+
+        void GenerateDataForVisualDesigner()
+        {
+            for (int i = 0; i < 6; i++)
+            {
+                Categories.Add(
+                    VisualDesignerDataGenerator.GenerateCategory()
+                );
+
+                Todos.Add(
+                    VisualDesignerDataGenerator.GenerateTodo(Categories[i])
+                );
+            }
         }
 
         public ObservableCollection<Todo> Todos
