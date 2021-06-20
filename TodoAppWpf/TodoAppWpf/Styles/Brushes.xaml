@@ -1,0 +1,34 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:TodoAppWpf.Styles">
+
+    <!--#region Кисти для кнопок-->
+
+    <!--Кисть границы кнопки-->
+    <SolidColorBrush
+        x:Key="Button.Border.Brush"
+        Color="Black"/>
+
+    <!--Кисть фона кнопки-->
+    <SolidColorBrush
+        x:Key="Button.Border.Background.Brush"
+        Color="Transparent"/>
+
+    <!--Кисть границы неактивной кнопки-->
+    <SolidColorBrush
+        x:Key="Button.Border.Brush.Disabled"
+        Color="Gray"/>
+
+    <!--Кисть фона неактивной кнопки-->
+    <SolidColorBrush
+        x:Key="Button.Border.Background.Brush.Disabled"
+        Color="LightGray"/>
+
+    <!--Кисть границы нажатой кнопки-->
+    <SolidColorBrush
+        x:Key="Button.Border.Brush.Pressed"
+        Color="LightGray"/>
+
+    <!--#endregion-->
+
+</ResourceDictionary>
