@@ -79,9 +79,9 @@
 
         <ListBox
             Grid.Row="1"
+            Style="{StaticResource ListBox.Style.Todos}"
             ItemsSource="{Binding Todos}"
-            SelectedItem="{Binding SelectedTodo}"
-            DisplayMemberPath="Header"/>
+            SelectedItem="{Binding SelectedTodo}"/>
 
     </Grid>
     

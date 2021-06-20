@@ -32,6 +32,9 @@
                 <ResourceDictionary
                     Source="Styles/ComboBox.xaml"/>
 
+                <ResourceDictionary
+                    Source="Styles/ListBox.xaml"/>
+
             </ResourceDictionary.MergedDictionaries>
             
         </ResourceDictionary>
