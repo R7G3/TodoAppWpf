@@ -17,6 +17,13 @@
                 x:Key="Locator"
                 d:IsDataSource="True"
                 xmlns:vm="clr-namespace:TodoAppWpf.ViewModel" />
+
+            <ResourceDictionary.MergedDictionaries>
+
+                <ResourceDictionary
+                    Source="Styles/Window.xaml"/>
+
+            </ResourceDictionary.MergedDictionaries>
             
         </ResourceDictionary>
         
