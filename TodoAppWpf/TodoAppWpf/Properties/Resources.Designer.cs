@@ -59,5 +59,23 @@ namespace TodoAppWpf.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Вы действительно хотите это удалить?.
+        /// </summary>
+        internal static string UI_AreYouSureWantDeleteThis {
+            get {
+                return ResourceManager.GetString("UI_AreYouSureWantDeleteThis", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Подтвердите действие.
+        /// </summary>
+        internal static string UI_ConfirmAction {
+            get {
+                return ResourceManager.GetString("UI_ConfirmAction", resourceCulture);
+            }
+        }
     }
 }
