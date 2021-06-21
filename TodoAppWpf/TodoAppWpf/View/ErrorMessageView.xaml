@@ -1,0 +1,64 @@
+﻿<Window x:Class="TodoAppWpf.View.ErrorMessageView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:vm="clr-namespace:TodoAppWpf.ViewModel"
+        xmlns:local="clr-namespace:TodoAppWpf.View"
+        xmlns:p="clr-namespace:TodoAppWpf.Properties"
+        mc:Ignorable="d"
+        Title="{Binding Title}"
+        WindowStartupLocation="CenterOwner"
+        Style="{StaticResource Window.Style.ErrorMessageView}"
+        d:DataContext="{d:DesignInstance Type={x:Type vm:ErrorMessageViewModel}, IsDesignTimeCreatable=True}">
+    
+    <Grid
+        Margin="5">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock
+            Grid.Row="0"
+            HorizontalAlignment="Center"
+            TextWrapping="Wrap"
+            FontSize="20"
+            Text="{Binding Header}"/>
+
+        <ScrollViewer
+            Grid.Row="1"
+            HorizontalScrollBarVisibility="Disabled"
+            VerticalScrollBarVisibility="Hidden"
+            CanContentScroll="True">
+
+            <TextBlock
+                TextWrapping="Wrap"
+                Text="{Binding Message}"/>
+
+        </ScrollViewer>
+
+        <DockPanel
+            Grid.Row="2">
+
+            <Button
+                DockPanel.Dock="Right"
+                Content="{x:Static p:Resources.UI_Close}"
+                Command="{Binding OkCommand}"
+                Style="{StaticResource Button.Style}"/>
+
+            <Button
+                DockPanel.Dock="Left"
+                Width="130"
+                HorizontalAlignment="Left"
+                Content="{x:Static p:Resources.UI_CopyToClipboard}"
+                Command="{Binding CopyToClipboardCommand}"
+                Style="{StaticResource Button.Style}"/>
+
+        </DockPanel>
+
+    </Grid>
+    
+</Window>
