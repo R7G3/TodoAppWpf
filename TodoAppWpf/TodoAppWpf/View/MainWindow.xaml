@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TodoAppWpf"
         xmlns:vm="clr-namespace:TodoAppWpf.ViewModel"
+        xmlns:p="clr-namespace:TodoAppWpf.Properties"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
         d:DataContext="{d:DesignInstance Type=vm:MainViewModel, IsDesignTimeCreatable=True}"
@@ -41,20 +42,24 @@
                             Property="Margin"
                             Value="3,6,0,0"/>
 
+                        <Setter
+                            Property="Width"
+                            Value="90" />
+
                     </Style>
 
                 </StackPanel.Resources>
 
                 <Button
-                    Content="Add"
+                    Content="{x:Static p:Resources.UI_Add}"
                     Command="{Binding AddTodoCommand}"/>
 
                 <Button
-                    Content="Edit"
+                    Content="{x:Static p:Resources.UI_Edit}"
                     Command="{Binding EditTodoCommand}"/>
 
                 <Button
-                    Content="Delete"
+                    Content="{x:Static p:Resources.UI_Delete}"
                     Command="{Binding DeleteTodoCommand}"/>
 
             </StackPanel>

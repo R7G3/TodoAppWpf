@@ -61,6 +61,15 @@ namespace TodoAppWpf.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Добавить.
+        /// </summary>
+        internal static string UI_Add {
+            get {
+                return ResourceManager.GetString("UI_Add", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Произошла ошибка.
         /// </summary>
         internal static string UI_AnErrorHasOccurred {
@@ -115,11 +124,47 @@ namespace TodoAppWpf.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Удалить.
+        /// </summary>
+        internal static string UI_Delete {
+            get {
+                return ResourceManager.GetString("UI_Delete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Редактировать.
+        /// </summary>
+        internal static string UI_Edit {
+            get {
+                return ResourceManager.GetString("UI_Edit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Ок.
         /// </summary>
         internal static string UI_Ok {
             get {
                 return ResourceManager.GetString("UI_Ok", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на +.
+        /// </summary>
+        internal static string UI_Plus {
+            get {
+                return ResourceManager.GetString("UI_Plus", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на X.
+        /// </summary>
+        internal static string UI_X {
+            get {
+                return ResourceManager.GetString("UI_X", resourceCulture);
             }
         }
     }
