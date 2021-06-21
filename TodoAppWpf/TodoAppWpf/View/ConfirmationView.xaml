@@ -20,7 +20,6 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        <!--TODO завести словарь ресурсов для текстблоков-->
         <TextBlock
             Grid.Row="0"
             Style="{StaticResource TextBlock.Style.ActionDescription}"
