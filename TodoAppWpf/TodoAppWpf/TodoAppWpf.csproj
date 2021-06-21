@@ -79,6 +79,7 @@
     <Compile Include="ViewModel\CategoryEditorViewModel.cs" />
     <Compile Include="ViewModel\ConfirmationViewModel.cs" />
     <Compile Include="ViewModel\DialogViewModel.cs" />
+    <Compile Include="ViewModel\ErrorMessageViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\TodoEditorViewModel.cs" />
     <Compile Include="ViewModel\ViewModelLocator.cs" />
