@@ -23,5 +23,27 @@
             Value="500"/>
 
     </Style>
+
+    <Style
+        x:Key="Window.Style.EditorDialog"
+        TargetType="Window">
+
+        <Setter
+            Property="MinHeight"
+            Value="260"/>
+
+        <Setter
+            Property="MinWidth"
+            Value="300"/>
+
+        <Setter
+            Property="Height"
+            Value="260"/>
+
+        <Setter
+            Property="Width"
+            Value="300"/>
+
+    </Style>
     
 </ResourceDictionary>
