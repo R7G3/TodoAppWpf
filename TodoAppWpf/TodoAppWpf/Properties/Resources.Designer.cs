@@ -61,6 +61,15 @@ namespace TodoAppWpf.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Произошла ошибка.
+        /// </summary>
+        internal static string UI_AnErrorHasOccurred {
+            get {
+                return ResourceManager.GetString("UI_AnErrorHasOccurred", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Вы действительно хотите это удалить?.
         /// </summary>
         internal static string UI_AreYouSureWantDeleteThis {
