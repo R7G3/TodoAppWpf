@@ -126,8 +126,14 @@
   <data name="UI_Cancel" xml:space="preserve">
     <value>Отмена</value>
   </data>
+  <data name="UI_Close" xml:space="preserve">
+    <value>Закрыть</value>
+  </data>
   <data name="UI_ConfirmAction" xml:space="preserve">
     <value>Подтвердите действие</value>
+  </data>
+  <data name="UI_CopyToClipboard" xml:space="preserve">
+    <value>Копировать в буфер</value>
   </data>
   <data name="UI_Ok" xml:space="preserve">
     <value>Ок</value>
