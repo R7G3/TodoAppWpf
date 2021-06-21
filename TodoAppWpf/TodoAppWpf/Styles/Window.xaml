@@ -2,6 +2,7 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:local="clr-namespace:TodoAppWpf.Styles">
 
+    <!--Стиль с размерами главного окна-->
     <Style
         x:Key="Window.Style"
         TargetType="Window">
@@ -24,8 +25,9 @@
 
     </Style>
 
+    <!--Стиль с размерами окна редактора задач-->
     <Style
-        x:Key="Window.Style.EditorDialog"
+        x:Key="Window.Style.TodoEditorDialog"
         TargetType="Window">
 
         <Setter
@@ -45,5 +47,28 @@
             Value="300"/>
 
     </Style>
-    
+
+    <!--Стиль с размерами окна редактора категорий-->
+    <Style
+        x:Key="Window.Style.CategoryEditorDialog"
+        TargetType="Window">
+
+        <Setter
+            Property="MinHeight"
+            Value="120"/>
+
+        <Setter
+            Property="MinWidth"
+            Value="300"/>
+
+        <Setter
+            Property="Height"
+            Value="120"/>
+
+        <Setter
+            Property="Width"
+            Value="300"/>
+
+    </Style>
+
 </ResourceDictionary>

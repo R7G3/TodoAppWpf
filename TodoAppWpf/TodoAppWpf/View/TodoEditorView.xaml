@@ -9,7 +9,7 @@
         Title="TodoEditorView"
         WindowStartupLocation="CenterScreen"
         d:DataContext="{d:DesignInstance Type={x:Type vm:TodoEditorViewModel}, IsDesignTimeCreatable=True}"
-        Style="{StaticResource Window.Style.EditorDialog}">
+        Style="{StaticResource Window.Style.TodoEditorDialog}">
     
     <Grid
         Margin="5">
