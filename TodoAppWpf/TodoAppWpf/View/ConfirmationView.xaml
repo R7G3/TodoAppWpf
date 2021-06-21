@@ -1,0 +1,62 @@
+﻿<Window x:Class="TodoAppWpf.View.ConfirmationView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TodoAppWpf.View"
+        xmlns:vm="clr-namespace:TodoAppWpf.ViewModel"
+        xmlns:p="clr-namespace:TodoAppWpf.Properties"
+        mc:Ignorable="d"
+        Title="{Binding Title}"
+        WindowStartupLocation="CenterOwner"
+        Style="{StaticResource Window.Style.ConfirmationDialog}"
+        d:DataContext="{d:DesignInstance Type={x:Type vm:ConfirmationViewModel}, IsDesignTimeCreatable=True}">
+    
+    <Grid
+        Margin="5">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!--TODO завести словарь ресурсов для текстблоков-->
+        <TextBlock
+            Grid.Row="0"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center"
+            TextWrapping="Wrap"
+            FontSize="14"
+            Text="{Binding ActionDescription}"/>
+
+        <StackPanel
+            Grid.Row="3"
+            Style="{StaticResource StackPanel.Style.DialogControlPanel}">
+
+            <StackPanel.Resources>
+
+                <Style
+                    BasedOn="{StaticResource Button.Style}"
+                    TargetType="Button">
+
+                    <Setter
+                        Property="Margin"
+                        Value="0,0,5,0"/>
+
+                </Style>
+
+            </StackPanel.Resources>
+
+            <Button
+                Content="{x:Static p:Resources.UI_Cancel}"
+                Command="{Binding CancelCommand}"/>
+
+            <Button
+                Content="{x:Static p:Resources.UI_Ok}"
+                Command="{Binding OkCommand}"/>
+
+        </StackPanel>
+
+    </Grid>
+    
+</Window>

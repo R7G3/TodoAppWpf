@@ -85,6 +85,9 @@
     <Compile Include="View\CategoryEditorView.xaml.cs">
       <DependentUpon>CategoryEditorView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\ConfirmationView.xaml.cs">
+      <DependentUpon>ConfirmationView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\TodoEditorView.xaml.cs">
       <DependentUpon>TodoEditorView.xaml</DependentUpon>
     </Compile>
@@ -113,6 +116,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\CategoryEditorView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ConfirmationView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -71,4 +71,27 @@
 
     </Style>
 
+    <!--Стиль с размерами окна подтверждения действий-->
+    <Style
+        x:Key="Window.Style.ConfirmationDialog"
+        TargetType="Window">
+
+        <Setter
+            Property="MinHeight"
+            Value="150"/>
+
+        <Setter
+            Property="MinWidth"
+            Value="250"/>
+
+        <Setter
+            Property="Height"
+            Value="160"/>
+
+        <Setter
+            Property="Width"
+            Value="300"/>
+
+    </Style>
+    
 </ResourceDictionary>
