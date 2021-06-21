@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TodoAppWpf.View"
         xmlns:vm="clr-namespace:TodoAppWpf.ViewModel"
+        xmlns:p="clr-namespace:TodoAppWpf.Properties"
         mc:Ignorable="d"
         Title="CategoryEditorView"
         WindowStartupLocation="CenterOwner"
@@ -44,11 +45,11 @@
             </StackPanel.Resources>
 
             <Button
-                Content="Cancel"
+                Content="{x:Static p:Resources.UI_Cancel}"
                 Command="{Binding CancelCommand}"/>
 
             <Button
-                Content="Ok"
+                Content="{x:Static p:Resources.UI_Ok}"
                 Command="{Binding OkCommand}"/>
 
         </StackPanel>

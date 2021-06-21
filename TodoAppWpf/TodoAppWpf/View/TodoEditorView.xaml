@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TodoAppWpf.View"
+        xmlns:p="clr-namespace:TodoAppWpf.Properties"
         xmlns:vm="clr-namespace:TodoAppWpf.ViewModel"
         mc:Ignorable="d"
         Title="TodoEditorView"
@@ -75,11 +76,11 @@
             </StackPanel.Resources>
 
             <Button
-                Content="Cancel"
+                Content="{x:Static p:Resources.UI_Cancel}"
                 Command="{Binding CancelCommand}"/>
 
             <Button
-                Content="Ok"
+                Content="{x:Static p:Resources.UI_Ok}"
                 Command="{Binding OkCommand}"/>
 
         </StackPanel>
