@@ -71,10 +71,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Helper\CloseWindowHelper.cs" />
     <Compile Include="Helper\VisualDesignerDataGenerator.cs" />
     <Compile Include="Model\Category.cs" />
     <Compile Include="Model\Todo.cs" />
+    <Compile Include="Notifications.cs" />
+    <Compile Include="ViewModel\DialogViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
+    <Compile Include="ViewModel\TodoEditorViewModel.cs" />
     <Compile Include="ViewModel\ViewModelLocator.cs" />
     <Page Include="Styles\Brushes.xaml">
       <SubType>Designer</SubType>
