@@ -3,7 +3,7 @@ using GalaSoft.MvvmLight.Threading;
 using System;
 using System.Windows;
 
-namespace TodoAppWpf.Helpers
+namespace TodoAppWpf.Helper
 {
     public sealed class CloseWindowHelper
     {
