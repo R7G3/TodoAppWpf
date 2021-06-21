@@ -70,11 +70,29 @@ namespace TodoAppWpf.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Отмена.
+        /// </summary>
+        internal static string UI_Cancel {
+            get {
+                return ResourceManager.GetString("UI_Cancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Подтвердите действие.
         /// </summary>
         internal static string UI_ConfirmAction {
             get {
                 return ResourceManager.GetString("UI_ConfirmAction", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Ок.
+        /// </summary>
+        internal static string UI_Ok {
+            get {
+                return ResourceManager.GetString("UI_Ok", resourceCulture);
             }
         }
     }

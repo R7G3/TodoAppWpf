@@ -120,7 +120,13 @@
   <data name="UI_AreYouSureWantDeleteThis" xml:space="preserve">
     <value>Вы действительно хотите это удалить?</value>
   </data>
+  <data name="UI_Cancel" xml:space="preserve">
+    <value>Отмена</value>
+  </data>
   <data name="UI_ConfirmAction" xml:space="preserve">
     <value>Подтвердите действие</value>
+  </data>
+  <data name="UI_Ok" xml:space="preserve">
+    <value>Ок</value>
   </data>
 </root>
