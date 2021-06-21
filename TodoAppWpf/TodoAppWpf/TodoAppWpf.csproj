@@ -76,10 +76,14 @@
     <Compile Include="Model\Category.cs" />
     <Compile Include="Model\Todo.cs" />
     <Compile Include="Notifications.cs" />
+    <Compile Include="ViewModel\CategoryEditorViewModel.cs" />
     <Compile Include="ViewModel\DialogViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\TodoEditorViewModel.cs" />
     <Compile Include="ViewModel\ViewModelLocator.cs" />
+    <Compile Include="View\CategoryEditorView.xaml.cs">
+      <DependentUpon>CategoryEditorView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\TodoEditorView.xaml.cs">
       <DependentUpon>TodoEditorView.xaml</DependentUpon>
     </Compile>
@@ -104,6 +108,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Styles\Window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\CategoryEditorView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
