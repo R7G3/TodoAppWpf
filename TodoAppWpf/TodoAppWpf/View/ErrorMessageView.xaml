@@ -23,9 +23,7 @@
 
         <TextBlock
             Grid.Row="0"
-            HorizontalAlignment="Center"
-            TextWrapping="Wrap"
-            FontSize="20"
+            Style="{StaticResource TextBlock.Style.ErrorMessage.Header}"
             Text="{Binding Header}"/>
 
         <ScrollViewer
