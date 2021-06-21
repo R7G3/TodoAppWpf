@@ -35,6 +35,9 @@
                 <ResourceDictionary
                     Source="Styles/ListBox.xaml"/>
 
+                <ResourceDictionary
+                    Source="Styles/StackPanel.xaml"/>
+
             </ResourceDictionary.MergedDictionaries>
             
         </ResourceDictionary>

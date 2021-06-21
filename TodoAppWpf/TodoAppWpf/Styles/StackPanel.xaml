@@ -1,0 +1,27 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:TodoAppWpf.Styles">
+
+    <Style
+        x:Key="StackPanel.Style.DialogControlPanel"
+        TargetType="StackPanel">
+
+        <Setter
+            Property="Orientation"
+            Value="Horizontal" />
+
+        <Setter
+            Property="HorizontalAlignment"
+            Value="Stretch" />
+
+        <Setter
+            Property="FlowDirection"
+            Value="RightToLeft" />
+
+        <Setter
+            Property="VerticalAlignment"
+            Value="Stretch" />
+
+    </Style>
+    
+</ResourceDictionary>
