@@ -80,6 +80,10 @@
     <Compile Include="ViewModel\ConfirmationViewModel.cs" />
     <Compile Include="ViewModel\DialogViewModel.cs" />
     <Compile Include="ViewModel\ErrorMessageViewModel.cs" />
+    <Compile Include="ViewModel\ICategoryEditor.cs" />
+    <Compile Include="ViewModel\IConfirmationDialog.cs" />
+    <Compile Include="ViewModel\IErrorMessage.cs" />
+    <Compile Include="ViewModel\ITodoEditor.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\TodoEditorViewModel.cs" />
     <Compile Include="ViewModel\ViewModelLocator.cs" />
@@ -95,6 +99,15 @@
     <Compile Include="View\TodoEditorView.xaml.cs">
       <DependentUpon>TodoEditorView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="WindowPool\CategoryEditorPresentation.cs" />
+    <Compile Include="WindowPool\ConfirmationDialogPresentation.cs" />
+    <Compile Include="WindowPool\DialogPool.cs" />
+    <Compile Include="WindowPool\DialogPresentation.cs" />
+    <Compile Include="WindowPool\ErrorMessagePresentation.cs" />
+    <Compile Include="WindowPool\IDialogPool.cs" />
+    <Compile Include="WindowPool\IDialogPresentation.cs" />
+    <Compile Include="WindowPool\IGenericDialogPresentation.cs" />
+    <Compile Include="WindowPool\TodoEditorPresentation.cs" />
     <Page Include="Styles\Brushes.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
