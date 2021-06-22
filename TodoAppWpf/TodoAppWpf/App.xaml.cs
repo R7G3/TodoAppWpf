@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Threading;
 using TodoAppWpf.ViewModel;
+using TodoAppWpf.WindowPool;
 
 namespace TodoAppWpf
 {
@@ -19,12 +20,16 @@ namespace TodoAppWpf
     public partial class App : Application
     {
         private ISimpleIoc container;
+        private IDialogPool dialogPool;
 
         private void ApplicationStartup(object sender, StartupEventArgs args)
         {
             container = SimpleIoc.Default;
             ServiceLocator.SetLocatorProvider(() => container);
             DispatcherHelper.Initialize();
+
+            dialogPool = DialogPool.GetInstance();
+            container.Register<IDialogPool>(() => dialogPool);
 
             DispatcherUnhandledException += UnhandledExceptionHandler;
 
