@@ -3,7 +3,7 @@ using TodoAppWpf.Properties;
 
 namespace TodoAppWpf.ViewModel
 {
-    public class ConfirmationViewModel : DialogViewModel
+    public class ConfirmationViewModel : DialogViewModel, IConfirmationDialog
     {
         public ConfirmationViewModel()
         {

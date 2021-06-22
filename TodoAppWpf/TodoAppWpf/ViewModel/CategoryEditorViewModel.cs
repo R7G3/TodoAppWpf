@@ -5,7 +5,7 @@ using TodoAppWpf.Model;
 
 namespace TodoAppWpf.ViewModel
 {
-    public class CategoryEditorViewModel : DialogViewModel
+    public class CategoryEditorViewModel : DialogViewModel, ICategoryEditor
     {
         public CategoryEditorViewModel()
         {

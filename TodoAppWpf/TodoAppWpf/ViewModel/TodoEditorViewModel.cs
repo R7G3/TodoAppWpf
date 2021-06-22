@@ -4,7 +4,7 @@ using TodoAppWpf.Model;
 
 namespace TodoAppWpf.ViewModel
 {
-    public class TodoEditorViewModel : DialogViewModel
+    public class TodoEditorViewModel : DialogViewModel, ITodoEditor
     {
         public TodoEditorViewModel()
         {

@@ -6,7 +6,7 @@ using TodoAppWpf.Properties;
 
 namespace TodoAppWpf.ViewModel
 {
-    public class ErrorMessageViewModel : DialogViewModel
+    public class ErrorMessageViewModel : DialogViewModel, IErrorMessage
     {
         public ErrorMessageViewModel()
         {
