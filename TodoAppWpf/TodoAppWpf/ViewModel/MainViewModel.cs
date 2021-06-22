@@ -1,8 +1,11 @@
+using CommonServiceLocator;
 using GalaSoft.MvvmLight;
+using GalaSoft.MvvmLight.Ioc;
 using System.Collections.ObjectModel;
 using System.Windows.Input;
 using TodoAppWpf.Helper;
 using TodoAppWpf.Model;
+using TodoAppWpf.WindowPool;
 
 namespace TodoAppWpf.ViewModel
 {
@@ -20,6 +23,9 @@ namespace TodoAppWpf.ViewModel
     /// </summary>
     public class MainViewModel : ViewModelBase
     {
+        private IServiceLocator serviceLocator;
+        private IDialogPool dialogPool;
+
         /// <summary>
         /// Initializes a new instance of the MainViewModel class.
         /// </summary>
@@ -33,6 +39,9 @@ namespace TodoAppWpf.ViewModel
                 GenerateDataForVisualDesigner();
                 return;
             }
+
+            serviceLocator = SimpleIoc.Default;
+            dialogPool = serviceLocator.GetInstance<IDialogPool>();
         }
 
         void GenerateDataForVisualDesigner()
